@@ -49,3 +49,13 @@ if (!localStorage.getItem("cookieAccepted")) {
     banner.style.display = "none";
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector("nav ul");
+
+  if (hamburger && menu) {
+    hamburger.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  }
+});

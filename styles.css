@@ -197,3 +197,102 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* ================================
+   RESPONSIVE PATCH (SAFE MODE)
+   ================================ */
+
+/* Prevent overflow without altering layout */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make media flexible (no style change) */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container safety (keeps original widths) */
+.container {
+  width: 100%;
+}
+
+/* ---------- TABLET & BELOW ---------- */
+@media (max-width: 992px) {
+
+  /* Stack only when required */
+  .row,
+  .flex,
+  .grid {
+    flex-wrap: wrap;
+  }
+
+}
+
+/* ---------- MOBILE ONLY ---------- */
+@media (max-width: 768px) {
+
+  /* Navigation safety — NO color or font changes */
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* Avoid text overflow */
+  h1, h2, h3, p {
+    word-wrap: break-word;
+  }
+
+}
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 576px) {
+
+  /* Ensure sections don't overflow */
+  section,
+  article,
+  main,
+  footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+/* End of Responsive Patch */
+/* ================================
+   HAMBURGER MENU (SAFE)
+   ================================ */
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide menu by default */
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+
+  /* Show menu when active */
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+}
+/* End of Hamburger Menu */
