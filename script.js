@@ -50,12 +50,18 @@ if (!localStorage.getItem("cookieAccepted")) {
   });
 }
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.querySelector("nav ul");
 
-  if (hamburger && menu) {
-    hamburger.addEventListener("click", function () {
-      menu.classList.toggle("active");
-    });
+  var hamburger = document.getElementById("hamburger");
+  var menu = document.querySelector("nav ul");
+
+  if (!hamburger || !menu) {
+    console.error("Hamburger menu elements not found");
+    return;
   }
+
+  hamburger.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
+
 });
+// Close menu when a link is clicked (for better UX on mobile)
