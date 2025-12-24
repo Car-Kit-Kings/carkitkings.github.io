@@ -296,3 +296,51 @@ img, video, iframe {
 
 }
 /* End of Hamburger Menu */
+/* ================================
+   HEADER & NAV MOBILE FIX
+   ================================ */
+
+/* Ensure header spans full width */
+header {
+  width: 100%;
+  background: #0f172a; /* keep your existing color */
+}
+
+/* Center nav content */
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 15px;
+}
+
+/* Logo + hamburger alignment */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Fix hamburger position */
+.hamburger {
+  margin-left: auto;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* Menu dropdown */
+  nav ul {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    padding: 8px 0;
+  }
+
+}
+/* End of Header & Nav Mobile Fix */
