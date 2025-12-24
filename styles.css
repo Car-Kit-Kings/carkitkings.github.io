@@ -260,56 +260,47 @@ img, video, iframe {
 }
 /* End of Responsive Patch */
 /* ================================
-   HAMBURGER MENU (SAFE)
-   ================================ */
+    NAVIGATION STYLES
+    ================================ */
 
-/* Hide hamburger on desktop */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: #fff;
-  cursor: pointer;
+/* Desktop nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Mobile only */
-/* Hamburger visible only on mobile */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* show button */
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* Hide menu initially */
   nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px; /* adjust based on header height */
-    right: 20px;
-    background: #fff;
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 10px 0;
-    z-index: 100;
-  }
-
-  /* Show menu when active */
-  nav ul.active {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 0;
     text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 8px 0;
   }
 }
 
-/* End of Hamburger Menu */
 /* ================================
    HEADER & NAV MOBILE FIX
    ================================ */
@@ -357,15 +348,15 @@ nav {
   }
 
 }
-
 /* End of Header & Nav Mobile Fix */
-/* Ensure the button is visible and clickable on mobile */
+/* This part ensures the button is invisible on desktop */
 #hamburger {
   display: none;
-  cursor: pointer;
-  z-index: 10001;
+  flex-direction: column;
+  gap: 5px;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 #hamburger span {
@@ -373,31 +364,53 @@ nav {
   width: 25px;
   height: 3px;
   background-color: white;
-  margin: 5px 0;
+}
+
+/* This part handles the mobile transformation */
+@media (max-width: 768px) {
+  #hamburger {
+    display: flex; /* Button appears on mobile */
+  }
+
+  nav ul {
+    display: none; /* Menu hides on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: #0f172a; /* Matches your header */
+    position: absolute;
+    top: 70px; /* Adjust this if your header is taller/shorter */
+    left: 0;
+    padding: 20px 0;
+  }
+
+  /* This is what your JavaScript triggers */
+  nav ul.active {
+    display: flex !important;
+  }
+}
+#hamburger {
+  display: none; /* Desktop */
+  z-index: 9999; /* Put it on top of everything */
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); /* Temporary: gives it a slight box so you can see the hit area */
+  border: 1px solid red; /* Temporary: remove this once it works */
 }
 
 @media (max-width: 768px) {
   #hamburger {
-    display: flex; /* Show on mobile */
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
   }
 
-  /* Target the list - ensure your HTML has class="nav-menu" */
+  /* Make sure the menu doesn't block the button */
   .nav-menu {
-    display: none !important; 
-    flex-direction: column !important;
-    position: absolute !important;
-    top: 60px; /* Adjust based on header height */
-    left: 0;
-    width: 100% !important;
-    background-color: #0f172a;
-    padding: 20px 0;
-    margin: 0 !important;
-    list-style: none;
-    z-index: 10000;
+    display: none !important;
   }
 
-  /* This is what shows the menu */
   .nav-menu.active {
     display: flex !important;
   }
