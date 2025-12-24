@@ -357,4 +357,48 @@ nav {
   }
 
 }
+
 /* End of Header & Nav Mobile Fix */
+/* Ensure the button is visible and clickable on mobile */
+#hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 10001;
+  background: none;
+  border: none;
+}
+
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: flex; /* Show on mobile */
+    flex-direction: column;
+  }
+
+  /* Target the list - ensure your HTML has class="nav-menu" */
+  .nav-menu {
+    display: none !important; 
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100% !important;
+    background-color: #0f172a;
+    padding: 20px 0;
+    margin: 0 !important;
+    list-style: none;
+    z-index: 10000;
+  }
+
+  /* This is what shows the menu */
+  .nav-menu.active {
+    display: flex !important;
+  }
+}
