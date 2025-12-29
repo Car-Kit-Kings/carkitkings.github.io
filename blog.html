@@ -6,31 +6,6 @@
   <title>Car Kit Kings | Blog – Product Reviews & Guides</title>
   <meta name="description" content="Read our latest buying guides and product reviews.">
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Best Car Cleaning Kits (2025)",
-  "author": {
-    "@type": "Organization",
-    "name": "Car Kit Kings"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Car Kit Kings",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://carkitkings.github.io/images/logo.png"
-    }
-  },
-  "datePublished": "2025-01-01",
-  "dateModified": "2025-01-01",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://carkitkings.github.io/"
-  }
-}
-</script>
 </head>
 
 <body>
@@ -43,12 +18,7 @@
           <img src="logo.webp" alt="Site Logo" id="mainLogo" width="75px" height="75px">
         </a>
       </div>
-      <button id="hamburger" class="menu-toggle" aria-label="Open Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="catalogue.html">Catalogue</a></li>
@@ -62,85 +32,33 @@
 <main class="container">
   <h1>Blog</h1>
 
-  <article>
-    <h2><a href="#">Best XYZ for Beginners</a></h2>
-    <p>Short intro summary for SEO and users.</p>
+  <section class="blog-wrapper">
+  
+  <article class="blog-card">
+    <a href="post-1.html" class="blog-image">
+      <div class="feature-image">
+        <img src="Best Interior Car Cleaning Products.webp" alt="Best Interior Car Cleaning Products">
+      </div>
+    </a>
+
+    <div class="blog-content">
+      <h2>
+        <a href="best-interior-car-cleaning-product.html">The Best Products for Cleaning the Interior of Your Car</a>
+      </h2>
+      <p>
+        Cleaning the interior of your car isn't just for appearances; it also influences how comfortable it is, how much you can sell it for, and even how much fun it is to drive every day. In this guide, we explore the top-rated interior car cleaning products that can help you maintain a fresh and inviting cabin. From upholstery cleaners to dashboard wipes, we've got you covered with expert recommendations and tips.
+      </p>
+      <a href="best-interior-car-cleaning-product.html" class="read-more">Read More →</a>
+    </div>
   </article>
 
-  <article>
-    <h2><a href="#">XYZ vs ABC – Detailed Comparison</a></h2>
-    <p>Short intro summary.</p>
-  </article>
+  <!-- Duplicate article block for every new blog -->
+
+</section>
+
 
 </main>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    
-    /* --- 1. COOKIE BANNER LOGIC --- */
-    if (!localStorage.getItem("cookieAccepted")) {
-      const banner = document.createElement("div");
-      banner.id = "cookie-banner";
-      banner.innerHTML = `
-        <p>We use cookies to improve your experience and analyze traffic. By continuing, you agree to our 
-        <a href="privacy-policy.html" style="color:#fff; text-decoration:underline;">Privacy Policy</a>.</p>
-        <button id="cookie-accept">Accept</button>
-      `;
 
-      document.body.appendChild(banner);
-
-      // Inline styles for banner
-      Object.assign(banner.style, {
-        position: "fixed",
-        bottom: "0",
-        left: "0",
-        right: "0",
-        backgroundColor: "#0f172a",
-        color: "#fff",
-        padding: "15px 20px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        zIndex: "9999",
-        fontSize: "14px"
-      });
-
-      const btn = document.getElementById("cookie-accept");
-      Object.assign(btn.style, {
-        backgroundColor: "#38bdf8",
-        color: "#000",
-        border: "none",
-        padding: "8px 15px",
-        cursor: "pointer",
-        borderRadius: "4px",
-        fontWeight: "bold"
-      });
-
-      btn.addEventListener("click", function () {
-        localStorage.setItem("cookieAccepted", "true");
-        banner.style.display = "none";
-      });
-    }
-
-    /* --- 2. HAMBURGER MENU LOGIC --- */
-    const hamburger = document.getElementById("hamburger");
-    const menu = document.querySelector(".nav-menu");
-
-    if (hamburger && menu) {
-      hamburger.addEventListener("click", function (e) {
-        e.stopPropagation(); // Prevents the click from bubbling up
-        menu.classList.toggle("active");
-        console.log("Menu toggled!");
-      });
-
-      // Close menu if clicking outside of it
-      document.addEventListener("click", function (e) {
-        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-          menu.classList.remove("active");
-        }
-      });
-    }
-  });
-</script>
 <footer>
   <div class="container">
     <p>All rights reserved © 2025 Car Kit Kings</p>
@@ -149,8 +67,3 @@
 
 </body>
 </html>
-
-
-
-
-

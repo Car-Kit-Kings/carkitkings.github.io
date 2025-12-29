@@ -415,3 +415,83 @@ nav {
     display: flex !important;
   }
 }
+/* Blog Grid */
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 16px;
+}
+
+/* Blog Card - Flex layout for desktop */
+.blog-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: row; /* Aligns image left, content right */
+  align-items: flex-start;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+/* Image Container - Fixed size on desktop */
+.blog-image {
+  flex: 0 0 250px; /* Limits image width to 250px */
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  margin: 0; 
+  border-radius: 0; /* Square edges look better when flush left */
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 200px; /* Adjust height to your preference */
+  object-fit: cover;
+  display: block;
+}
+
+/* Content Area */
+.blog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Responsive: Stack vertically on Mobile */
+@media (max-width: 768px) {
+  .blog-card {
+    flex-direction: column; /* Stacks image on top of text */
+  }
+
+  .blog-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .feature-image img {
+    height: 180px; /* Slightly shorter for mobile */
+    aspect-ratio: 16 / 9;
+  }
+}
+/* Content Title Link */
+.blog-content h2 a {
+  text-decoration: none; /* This removes the underline */
+  color: #111;           /* Keeps the text dark instead of link-blue/purple */
+  display: block;        /* Makes the whole title area clickable */
+}
+
+/* Optional: Add a hover effect so users know it's a link */
+.blog-content h2 a:hover {
+  color: #0066cc;        /* Changes color slightly on hover */
+  text-decoration: none; /* Ensures no underline appears on hover either */
+}
