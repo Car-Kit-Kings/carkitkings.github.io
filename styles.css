@@ -494,4 +494,77 @@ nav {
 .blog-content h2 a:hover {
   color: #0066cc;        /* Changes color slightly on hover */
   text-decoration: none; /* Ensures no underline appears on hover either */
+
+}
+/* ===== Catalogue Page Only ===== */
+
+.cat-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.cat-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cat-intro {
+  color: #555;
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+/* Grid */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.cat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image */
+.cat-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.cat-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.cat-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: auto;
+}
+
+/* Button */
+.cat-btn {
+  margin-top: 14px;
+  padding: 10px 14px;
+  text-align: center;
+  background: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.cat-btn:hover {
+  background: #004fa3;
 }
