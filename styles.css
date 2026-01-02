@@ -392,8 +392,6 @@ nav {
   display: none; /* Desktop */
   z-index: 9999; /* Put it on top of everything */
   position: relative;
-  background: rgba(255, 255, 255, 0.1); /* Temporary: gives it a slight box so you can see the hit area */
-  border: 1px solid red; /* Temporary: remove this once it works */
 }
 
 @media (max-width: 768px) {
@@ -646,4 +644,5 @@ nav {
     font-size: 1rem;
   }
 }
+
 
