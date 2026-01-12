@@ -1,67 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://car-kit-kings.github.io/carkitkings.github.io/</loc>
+  </url>
 
-
-<url>
-  <loc>https://car-kit-kings.github.io/carkitkings.github.io/</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/index.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/blog.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/catalogue.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/about.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/contact.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/privacy-policy.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/disclosure.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/disclamer.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://car-kit-kings.github.io/carkitkings.github.io/terms&amp;conditions.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
+  <loc>https://car-kit-kings.github.io/carkitkings.github.io/terms&conditions.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://car-kit-kings.github.io/carkitkings.github.io/cookie-policy.html</loc>
-  <lastmod>2025-12-25T17:15:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 
 </urlset>
+
