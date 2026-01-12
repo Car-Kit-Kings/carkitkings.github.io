@@ -37,7 +37,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://car-kit-kings.github.io/carkitkings.github.io/terms&conditions.html</loc>
+  <loc>https://car-kit-kings.github.io/carkitkings.github.io/terms&amp;conditions.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
@@ -47,4 +47,5 @@
 
 
 </urlset>
+
 
