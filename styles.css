@@ -659,6 +659,323 @@ nav {
     font-size: 1rem;
   }
 }
+/* =========================
+   HOMEPAGE ONLY STYLES
+   ========================= */
+
+.home-page {
+  padding: 0 20px;
+  color: #1f2933;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* HERO */
+/* HERO WITH RESPONSIVE IMAGE */
+.home-page .hero-image {
+  position: relative;
+  min-height: 420px;
+  margin: 40px 0;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background-image: url("hero-car-detailing.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.home-page .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(15, 23, 42, 0.75)
+  );
+}
+
+/* CONTENT ABOVE IMAGE */
+.home-page .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 24px;
+  max-width: 900px;
+}
+
+.home-page .hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 18px;
+}
+
+.home-page .hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .home-page .hero-image {
+    min-height: 340px;
+    border-radius: 16px;
+  }
+
+  .home-page .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .home-page .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-page .hero-image {
+    min-height: 520px;
+  }
+}
+
+/* TOPICS */
+.home-page .topics {
+  margin: 80px 0;
+}
+
+.home-page .topics h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-page .topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.home-page .topic-card {
+  background: #f8fafc;
+  padding: 28px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-page .topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* INSIGHTS */
+.home-page .insights {
+  margin: 80px 0;
+}
+
+.home-page .insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.home-page .insight-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  border-left: 5px solid #2563eb;
+}
+/* INSIGHTS GRID – PREMIUM POPUP STYLE */
+.home-page .insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* INDIVIDUAL INSIGHT BOX */
+.home-page .insights-grid > * {
+  position: relative;
+  padding: 34px 30px;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    0 25px 50px rgba(15, 23, 42, 0.18),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* HOVER – POPUP FEEL */
+.home-page .insights-grid > *:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow:
+    0 40px 80px rgba(15, 23, 42, 0.28),
+    inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+/* TITLE */
+.home-page .insights-grid h3 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+/* TEXT */
+.home-page .insights-grid p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #334155;
+}
+
+/* SUBTLE AUTO-FOCUS ON LOAD */
+@media (prefers-reduced-motion: no-preference) {
+  .home-page .insights-grid > * {
+    animation: insightLift 0.6s ease-out both;
+  }
+
+  @keyframes insightLift {
+    from {
+      opacity: 0;
+      transform: translateY(18px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+/* MOBILE REFINEMENT */
+@media (max-width: 640px) {
+  .home-page .insights-grid {
+    gap: 24px;
+  }
+
+  .home-page .insights-grid > * {
+    padding: 26px 22px;
+    border-radius: 20px;
+  }
+
+  .home-page .insights-grid h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* TRUST */
+.home-page .trust {
+  background: #f1f5f9;
+  padding: 60px 40px;
+  border-radius: 24px;
+  margin: 80px 0;
+}
+
+/* LATEST */
+/* LATEST ARTICLES – 2x2 GRID */
+.home-page .latest {
+  margin: 100px 0;
+}
+
+.home-page .latest h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-page .latest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* ARTICLE CARD */
+/* HORIZONTAL ARTICLE CARD */
+.home-page .latest-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-page .latest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 56px rgba(15, 23, 42, 0.18);
+}
+
+/* THUMBNAIL */
+/* 1:1 THUMBNAILS */
+/* SIZE-LIMITED 1:1 THUMBNAILS */
+.home-page .latest-card img {
+  width: 100%;
+  max-width: 180px;       /* limits visual size */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 16px auto 0;    /* centers image */
+  border-radius: 14px;
+}
+@media (max-width: 640px) {
+  .home-page .latest-card img {
+    max-width: 140px;
+    margin-top: 14px;
+  }
+}
+
+/* TITLE */
+.home-page .latest-card h3 {
+  font-size: 1.05rem;
+  padding: 18px 20px;
+  line-height: 1.4;
+}
+
+.home-page .latest-card a {
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.home-page .latest-card a:hover {
+  color: #2563eb;
+}
+@media (max-width: 768px) {
+  .home-page .latest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .latest-card img {
+    height: 180px;
+  }
+}
+
+
+/* CTA */
+.home-page .explore {
+  text-align: center;
+  margin: 100px 0;
+}
+
+.home-page .explore-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.home-page .explore-btn:hover {
+  background: #1e40af;
+}
 
 
 
