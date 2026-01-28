@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://car-kit-kings.github.io/carkitkings.github.io/sitemap.xml
