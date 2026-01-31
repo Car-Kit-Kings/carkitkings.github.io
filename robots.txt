@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://car-kit-kings.github.io/carkitkings.github.io/sitemap.xml
+Sitemap: https://carkitkings.pages.dev/sitemap.xml
